@@ -23,24 +23,24 @@ function App() {
     {
       path: "",
       element: <Layout />,
-      errorElement: <Layout />,
+      errorElement: <Home />,
       children: [
-        { index: true, element: <Home />, errorElement: <Layout /> },
-        { path: "/home", element: <Home />, errorElement: <Layout /> },
+        { index: true, element: <Home />, errorElement: <Home /> },
+        { path: "/home", element: <Home />, errorElement: <Home /> },
         {
           path: "/productdetails/:id",
           element: <ProductDetails />,
-          errorElement: <Layout />,
+          errorElement: <Home />,
         },
-        { path: "/cart", element: <Cart />, errorElement: <Layout /> },
+        { path: "/cart", element: <Cart />, errorElement: <Home /> },
         {
           path: "/checkout/:id",
           element: <Checkout />,
-          errorElement: <Layout />,
+          errorElement: <Home />,
         },
-        { path: "/login", element: <Login />, errorElement: <Layout /> },
-        { path: "/register", element: <Register />, errorElement: <Layout /> },
-        { path: "*", element: <NotFound />, errorElement: <Layout /> },
+        { path: "/login", element: <Login />, errorElement: <Home /> },
+        { path: "/register", element: <Register />, errorElement: <Home /> },
+        { path: "*", element: <NotFound />, errorElement: <Home /> },
       ],
     },
   ]);
