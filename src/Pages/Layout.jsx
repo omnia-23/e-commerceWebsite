@@ -28,7 +28,7 @@ export default function Layout() {
       <div className="container web">
         <Outlet />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
