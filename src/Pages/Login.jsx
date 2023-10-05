@@ -26,7 +26,7 @@ export default function Login() {
           localStorage.setItem("token", res.data.token);
           localStorage.setItem("role", "user");
           setRole("user");
-          navigate("/home");
+          navigate("home");
         }
       })
       .catch((err) => {
