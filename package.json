@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "0.1.0",
-  "homepage": "https://omnia-23.github.io/home",
+  "homepage": "https://omnia-23.github.io/e-commerceWebsite",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
