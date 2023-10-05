@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+:root {
+  --main-color: #0aad0a;
+  --light-color: #f0f3f2;
+  --shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
+    rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+    rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+  --font-family: "Encode Sans Expanded", sans-serif;
+  --rating-color: #ffc908;
+}
+
+body {
+  font-family: var(--font-family) !important;
+}
+.alert {
+  padding: 0.5rem !important;
+  margin: 5px 0px !important;
+}
+.btn-main {
+  color: #fff !important;
+  background-color: var(--main-color) !important;
+}
+.rating-color {
+  color: var(--rating-color);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+a {
+  color: black !important;
+  text-decoration: none !important;
+}
+.product:hover {
+  box-shadow: var(--shadow);
+  /* border: solid 1px var(--main-color); */
+}
+.product .btn {
+  transition: transform 1s, opacity 1s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.product:hover .btn {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.font-sm {
+  font-size: 14px;
+}
+.text-main {
+  color: var(--main-color);
+}
+.bg-main {
+  background-color: var(--main-color) !important;
+}
+.bg-main-light {
+  background-color: var(--light-color) !important;
+}
+.title {
+  font-size: 14px;
+}
+.product-title {
+  font-size: small;
+}
+.loading {
+  position: fixed;
+  z-index: 5555;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f0f3f2;
+  font-size: 70px;
+}
+a {
+  cursor: pointer;
+}
+.navbar {
+  position: fixed !important;
+  z-index: 66;
+  top: 0;
+  width: 100%;
+}
+.badge {
+  --bs-badge-font-size: 0.65em !important;
+}
+.web{
+  margin-top: 80px !important; 
+}
+.bt{
+  --bs-btn-padding-x: 0.5rem !important;
+  --bs-btn-padding-y: 0.1rem !important;
+}
