@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/e-commerceWebsite/static/css/main.f3926132.css",
+    "main.js": "/e-commerceWebsite/static/js/main.8b6d43b6.js",
+    "static/media/fa-solid-900.ttf": "/e-commerceWebsite/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
+    "static/media/slider-image-1.jpeg": "/e-commerceWebsite/static/media/slider-image-1.3c3940ee0f1c3b17ff9a.jpeg",
+    "static/media/grocery-banner.png": "/e-commerceWebsite/static/media/grocery-banner.2c56649c9cbe2e19b86f.png",
+    "static/media/fa-brands-400.ttf": "/e-commerceWebsite/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
+    "static/media/slider-image-3.jpeg": "/e-commerceWebsite/static/media/slider-image-3.7e5c9f7a513f6db6dd5e.jpeg",
+    "static/media/slider-image-2.jpeg": "/e-commerceWebsite/static/media/slider-image-2.e510b0de8a4d96a1d5ad.jpeg",
+    "static/media/grocery-banner-2.jpeg": "/e-commerceWebsite/static/media/grocery-banner-2.7a4a78a90acc3d5847cb.jpeg",
+    "static/media/fa-solid-900.woff2": "/e-commerceWebsite/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
+    "static/media/fa-brands-400.woff2": "/e-commerceWebsite/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
+    "static/media/error.svg": "/e-commerceWebsite/static/media/error.084f5f5b0eb10d3216cb7c939108e1f6.svg",
+    "static/media/fa-regular-400.ttf": "/e-commerceWebsite/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
+    "static/media/fa-regular-400.woff2": "/e-commerceWebsite/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
+    "static/media/fa-v4compatibility.ttf": "/e-commerceWebsite/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
+    "static/media/fa-v4compatibility.woff2": "/e-commerceWebsite/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
+    "index.html": "/e-commerceWebsite/index.html",
+    "main.f3926132.css.map": "/e-commerceWebsite/static/css/main.f3926132.css.map",
+    "main.8b6d43b6.js.map": "/e-commerceWebsite/static/js/main.8b6d43b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3926132.css",
+    "static/js/main.8b6d43b6.js"
+  ]
+}
