@@ -26,7 +26,7 @@ function App() {
       errorElement: <Home />,
       children: [
         {
-          index:true,
+          index: true,
           element: <Home />,
           errorElement: <Home />,
         },
