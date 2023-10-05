@@ -26,6 +26,11 @@ function App() {
       errorElement: <Home />,
       children: [
         {
+          index:true,
+          element: <Home />,
+          errorElement: <Home />,
+        },
+        {
           path: "/e-commerceWebsite",
           element: <Home />,
           errorElement: <Home />,
