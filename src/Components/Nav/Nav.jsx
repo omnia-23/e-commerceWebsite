@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import style from "./nav.module.css";
 import { UserContext } from "../../Context/UserContext";
 import { CartContext } from "../../Context/CartContext";
+import logo from "../../images/freshcart-logo.svg"
 
 export default function Nav() {
   let { count } = useContext(CartContext);
@@ -16,9 +17,9 @@ export default function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <NavLink className="navbar-brand" to="">
-          FreshCart
-        </NavLink>
+        <Link className="navbar-brand" to="/">
+          <img src={logo} alt="FreshCart" className="w-100"></img>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"

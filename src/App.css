@@ -102,3 +102,10 @@ a {
   --bs-btn-padding-x: 0.5rem !important;
   --bs-btn-padding-y: 0.1rem !important;
 }
+.card {
+  width: 16rem;
+}
+.card-img-top {
+  height: 250px;
+  overflow: hidden !important;
+}

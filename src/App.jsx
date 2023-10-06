@@ -12,6 +12,8 @@ import ProductDetails from "./Pages/ProductDetails";
 import Cart from "./Pages/Cart";
 import Checkout from "./Pages/Checkout";
 import ForgetPassword from "./Pages/ForgetPassword";
+import Categories from "./Pages/Categories";
+import Brands from "./Pages/Brands";
 
 function App() {
   let { setRole, setToken } = useContext(UserContext);
@@ -20,36 +22,49 @@ function App() {
     setToken(localStorage.getItem("token"));
     setRole(localStorage.getItem("role"));
   }, []);
-  const routes = createBrowserRouter([
-    {
-      path: "/",
-      element: <Layout />,
-      errorElement: <Home />,
-      children: [
-        {
-          index: true,
-          element: <Home />,
-          errorElement: <Home />,
-        },
-        { path: "/home", element: <Home />, errorElement: <Home /> },
-        {
-          path: "/productdetails/:id",
-          element: <ProductDetails />,
-          errorElement: <Home />,
-        },
-        { path: "/cart", element: <Cart />, errorElement: <Home /> },
-        {
-          path: "/checkout/:id",
-          element: <Checkout />,
-          errorElement: <Home />,
-        },
-        { path: "/login", element: <Login />, errorElement: <Home /> },
-        { path: "/forgetpassword", element: <ForgetPassword />, errorElement: <Home /> },
-        { path: "/register", element: <Register />, errorElement: <Home /> },
-        { path: "*", element: <NotFound />, errorElement: <Home /> },
-      ],
-    },
-  ]);
+  const routes = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <Layout />,
+
+        children: [
+          {
+            index: true,
+            element: <Home />,
+            errorElement: <Home />,
+          },
+          { path: "home", element: <Home />, errorElement: <Home /> },
+          {
+            path: "categories",
+            element: <Categories />,
+            errorElement: <Home />,
+          },
+          { path: "brands", element: <Brands />, errorElement: <Home /> },
+          {
+            path: "productdetails/:id",
+            element: <ProductDetails />,
+            errorElement: <Home />,
+          },
+          { path: "cart", element: <Cart />, errorElement: <Home /> },
+          {
+            path: "checkout/:id",
+            element: <Checkout />,
+            errorElement: <Home />,
+          },
+          { path: "login", element: <Login />, errorElement: <Home /> },
+          {
+            path: "forgetpassword",
+            element: <ForgetPassword />,
+            errorElement: <Home />,
+          },
+          { path: "register", element: <Register />, errorElement: <Home /> },
+          { path: "*", element: <NotFound />, errorElement: <Home /> },
+        ],
+      },
+    ],
+    { basename: "/e-commerceWebsite" }
+  );
 
   return (
     <div>
