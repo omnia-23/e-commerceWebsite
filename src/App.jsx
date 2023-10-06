@@ -31,11 +31,6 @@ function App() {
           element: <Home />,
           errorElement: <Home />,
         },
-        {
-          path: "/e-commerceWebsite",
-          element: <Home />,
-          errorElement: <Home />,
-        },
         { path: "/home", element: <Home />, errorElement: <Home /> },
         {
           path: "/productdetails/:id",
