@@ -23,7 +23,7 @@ export default function Register() {
 
   async function register(val) {
     setLoading(true);
-    let response = await axios
+    await axios
       .post(`https://ecommerce.routemisr.com/api/v1/auth/signup`, val)
       .then((res) => {
         if (res.data.message === "success") navigate("/login");
@@ -43,7 +43,7 @@ export default function Register() {
       phone: "",
     },
     validationSchema,
-    onSubmit:register,
+    onSubmit: register,
   });
 
   return (
