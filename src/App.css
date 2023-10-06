@@ -13,6 +13,12 @@
 body {
   font-family: var(--font-family) !important;
 }
+
+.footer {
+  position: fixed !important;
+  z-index: 66;
+  bottom: 0px;
+}
 .alert {
   padding: 0.5rem !important;
   margin: 5px 0px !important;
@@ -88,10 +94,11 @@ a {
 .badge {
   --bs-badge-font-size: 0.65em !important;
 }
-.web{
-  margin-top: 80px !important; 
+.web {
+  margin-top: 80px !important;
+  min-height: 40vh;
 }
-.bt{
+.bt {
   --bs-btn-padding-x: 0.5rem !important;
   --bs-btn-padding-y: 0.1rem !important;
 }

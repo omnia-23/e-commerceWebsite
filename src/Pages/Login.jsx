@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import axios from "axios";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../Context/UserContext";
 
 export default function Login() {
@@ -26,7 +26,7 @@ export default function Login() {
           localStorage.setItem("token", res.data.token);
           localStorage.setItem("role", "user");
           setRole("user");
-          navigate("home");
+          navigate("/home");
         }
       })
       .catch((err) => {
@@ -92,13 +92,16 @@ export default function Login() {
               <i className="fa fa-spinner fa-spin small"></i>
             </button>
           ) : (
-            <button
-              disabled={!(inp.isValid && inp.dirty)}
-              className="btn-main btn my-2"
-              type="submit"
-            >
-              Login
-            </button>
+            <>
+              <button
+                disabled={!(inp.isValid && inp.dirty)}
+                className="btn-main btn my-2"
+                type="submit"
+              >
+                Login
+              </button>
+              <Link to="/forgetpassword" className="mx-2">Forget Password....?</Link>
+            </>
           )}
         </form>
       </div>

@@ -11,6 +11,7 @@ import CartProvider from "./Context/CartContext";
 import ProductDetails from "./Pages/ProductDetails";
 import Cart from "./Pages/Cart";
 import Checkout from "./Pages/Checkout";
+import ForgetPassword from "./Pages/ForgetPassword";
 
 function App() {
   let { setRole, setToken } = useContext(UserContext);
@@ -48,6 +49,7 @@ function App() {
           errorElement: <Home />,
         },
         { path: "/login", element: <Login />, errorElement: <Home /> },
+        { path: "/forgetpassword", element: <ForgetPassword />, errorElement: <Home /> },
         { path: "/register", element: <Register />, errorElement: <Home /> },
         { path: "*", element: <NotFound />, errorElement: <Home /> },
       ],
@@ -55,11 +57,11 @@ function App() {
   ]);
 
   return (
-    <>
+    <div>
       <CartProvider>
         <RouterProvider router={routes}></RouterProvider>
       </CartProvider>
-    </>
+    </div>
   );
 }
 export default App;

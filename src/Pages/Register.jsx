@@ -26,7 +26,7 @@ export default function Register() {
     let response = await axios
       .post(`https://ecommerce.routemisr.com/api/v1/auth/signup`, val)
       .then((res) => {
-        if (res.data.message === "success") navigate("login");
+        if (res.data.message === "success") navigate("/login");
       })
       .catch((err) => {
         setError(err.response.data.message);
