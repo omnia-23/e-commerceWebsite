@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/e-commerceWebsite/static/css/main.64af3d00.css",
-    "main.js": "/e-commerceWebsite/static/js/main.3d6e79b6.js",
+    "main.js": "/e-commerceWebsite/static/js/main.cbec1a4e.js",
     "static/media/fa-solid-900.ttf": "/e-commerceWebsite/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
     "static/media/slider-image-1.jpeg": "/e-commerceWebsite/static/media/slider-image-1.3c3940ee0f1c3b17ff9a.jpeg",
     "static/media/grocery-banner.png": "/e-commerceWebsite/static/media/grocery-banner.2c56649c9cbe2e19b86f.png",
@@ -21,10 +21,10 @@
     "static/media/paypal-seeklogo.com.svg": "/e-commerceWebsite/static/media/paypal-seeklogo.com.8863bdc31ec73114fb6f2cfbd965c84f.svg",
     "index.html": "/e-commerceWebsite/index.html",
     "main.64af3d00.css.map": "/e-commerceWebsite/static/css/main.64af3d00.css.map",
-    "main.3d6e79b6.js.map": "/e-commerceWebsite/static/js/main.3d6e79b6.js.map"
+    "main.cbec1a4e.js.map": "/e-commerceWebsite/static/js/main.cbec1a4e.js.map"
   },
   "entrypoints": [
     "static/css/main.64af3d00.css",
-    "static/js/main.3d6e79b6.js"
+    "static/js/main.cbec1a4e.js"
   ]
 }
