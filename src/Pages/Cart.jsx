@@ -8,10 +8,12 @@ export default function Cart() {
     useContext(CartContext);
   const [load, setLoad] = useState(false);
 
+  useEffect(() => {
+    get();
+  }, []);
   async function get() {
     await getall()
       .then((res) => {
-        console.log("cart",res);
         setCount(res.data.data.products.length);
         setCart(res.data.data);
       })
@@ -23,6 +25,8 @@ export default function Cart() {
   async function deleteCart(id) {
     await removeProduct(id)
       .then((res) => {
+        setCount(res.data.data.products.length);
+        setCart(res.data.data);
         toast.success("Done Successfully");
       })
       .catch((err) => {
@@ -34,6 +38,8 @@ export default function Cart() {
     setLoad(true);
     await updateProduct(id, num + 1)
       .then((res) => {
+        setCount(res.data.data.products.length);
+        setCart(res.data.data);
         toast.success("Done Successfully");
       })
       .catch((err) => {
@@ -47,6 +53,8 @@ export default function Cart() {
     if (num - 1 > 0) {
       await updateProduct(id, num - 1)
         .then((res) => {
+          setCount(res.data.data.products.length);
+          setCart(res.data.data);
           toast.success("Done Successfully");
         })
         .catch((err) => {
@@ -58,10 +66,6 @@ export default function Cart() {
 
     setLoad(false);
   }
- 
-  useEffect(() => {
-    get();
-  }, []);
 
   return (
     <div>

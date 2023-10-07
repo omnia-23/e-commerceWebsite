@@ -10,7 +10,6 @@ export default function Categories() {
       .get(`https://ecommerce.routemisr.com/api/v1/categories`)
       .then((res) => {
         setCategory(res.data.data);
-        console.log(res.data.data);
       })
       .catch((err) => {
         console.log(err);
@@ -33,20 +32,16 @@ export default function Categories() {
             {category
               ? category.map((elm) => {
                   return (
-                    <>
-                      <div className="col-md-3">
-                        <div className="card text-center">
-                          <img
-                            src={elm.image}
-                            className="card-img-top"
-                            alt={elm.name}
-                          />
-                          <h5 className="card-title fw-bold my-3">
-                            {elm.name}
-                          </h5>
-                        </div>
+                    <div key={elm._id} className="col-md-3">
+                      <div className="card text-center">
+                        <img
+                          src={elm.image}
+                          className="card-img-top"
+                          alt={elm.name}
+                        />
+                        <h5 className="card-title fw-bold my-3">{elm.name}</h5>
                       </div>
-                    </>
+                    </div>
                   );
                 })
               : ""}

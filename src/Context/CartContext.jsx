@@ -1,5 +1,5 @@
 import axios from "axios";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { UserContext } from "./UserContext";
 
 export let CartContext = createContext();
@@ -9,6 +9,7 @@ export default function CartProvider(props) {
   const [cart, setCart] = useState(null);
 
   let { token } = useContext(UserContext);
+  
 
   async function addtoCart(id) {
     return await axios.post(

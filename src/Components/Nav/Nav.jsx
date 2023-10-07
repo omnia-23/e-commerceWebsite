@@ -3,14 +3,16 @@ import { Link, NavLink } from "react-router-dom";
 import style from "./nav.module.css";
 import { UserContext } from "../../Context/UserContext";
 import { CartContext } from "../../Context/CartContext";
-import logo from "../../images/freshcart-logo.svg"
+import logo from "../../images/freshcart-logo.svg";
 
 export default function Nav() {
-  let { count } = useContext(CartContext);
+  let { count, setCart, setCount } = useContext(CartContext);
   let { role, token, setRole, setToken } = useContext(UserContext);
   function logOut() {
     setRole(null);
     setToken(null);
+    setCart(null);
+    setCount(0);
     localStorage.removeItem("token");
   }
 

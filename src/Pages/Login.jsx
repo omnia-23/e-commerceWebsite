@@ -4,11 +4,14 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../Context/UserContext";
+import { CartContext } from "../Context/CartContext";
 
 export default function Login() {
+  let { getall, setCart, setCount } = useContext(CartContext);
   const [loading, setLoading] = useState(false);
   const [err, setError] = useState(null);
   const navigate = useNavigate();
+
   let validationSchema = Yup.object({
     email: Yup.string().required("email is required").email("not valid"),
     password: Yup.string().required("password is required"),
@@ -18,10 +21,11 @@ export default function Login() {
   async function login(val) {
     setLoading(true);
 
-    let response = await axios
+    await axios
       .post(`https://ecommerce.routemisr.com/api/v1/auth/signin`, val)
       .then((res) => {
         if (res.data.message === "success") {
+          // get();
           setToken(res.data.token);
           localStorage.setItem("token", res.data.token);
           localStorage.setItem("role", "user");
@@ -42,6 +46,17 @@ export default function Login() {
     validationSchema,
     onSubmit: login,
   });
+
+  async function get() {
+    await getall()
+      .then((res) => {
+        setCount(res.data.data.products.length);
+      })
+      .catch((err) => {
+        console.log(err);
+        // toast.error(err.response.data.message);
+      });
+  }
 
   return (
     <>
@@ -100,7 +115,9 @@ export default function Login() {
               >
                 Login
               </button>
-              <Link to="/forgetpassword" className="mx-2">Forget Password....?</Link>
+              <Link to="/forgetpassword" className="mx-2">
+                Forget Password....?
+              </Link>
             </>
           )}
         </form>
